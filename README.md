@@ -32,13 +32,15 @@ php artisan migrate --seed
 install mailpit
 
 System Configuration
-QUEUE_CONNECTION=database
-MAIL_MAILER=smtp
-MAIL_HOST=127.0.0.1
-MAIL_PORT=1025
+
+- QUEUE_CONNECTION=database
+- MAIL_MAILER=smtp
+- MAIL_HOST=127.0.0.1
+- MAIL_PORT=1025
 
 Start Services
-mailpit # Start email catcher
-php artisan serve # Start Laravel
-php artisan messages:send: #Dispatches jobs to the queue.
-php artisan queue:work # Start queue worker
+
+- mailpit # Start email catcher
+- php artisan serve # Start Laravel
+- php artisan messages:send: #Dispatches jobs to the queue.
+- php artisan queue:work # Start queue worker
